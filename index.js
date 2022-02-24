@@ -60,16 +60,16 @@ const {
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:Lindow Amamiya\n' // Change To Your Name
-            + 'ORG:Creator SELF BOT;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=6289513946766:+62 895-1394-6766\n' // CHANGE YOUR NUMBER
+            + 'ORG:Creator SELF Aiman;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=60102810046:+60 10-281 0046\n' // CHANGE YOUR NUMBER
             + 'END:VCARD'
 
-prefix = 'z'
+prefix = '🗿'
 thumbcr = 'https://i.ibb.co/K204t7H/6f4f3db9e1f1.jpg'
 helpfoto = "https://i.ibb.co/m8xRvSz/fe5ce64951d8.jpg"
 blocked = []
 tmphit = []
-cr = '_*LINDOWSELF - BOT*_'
+cr = '_*Aiman self*_'
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 const bulan = arrayBulan[moment().format('MM') - 1]
@@ -238,7 +238,7 @@ lindow.on('group-participants-update', async (anu) => {
 			}
 			const botNumber = lindow.user.jid
 			const sender = isGroup ? lin.participant : lin.key.remoteJid
-			const ownerNumber = ["79610148941@s.whatsapp.net","13092046444@s.whatsapp.net"] // Change To Your Number
+			const ownerNumber = ["60102810046@s.whatsapp.net","0@s.whatsapp.net"] // Change To Your Number
 			const isAntiLink = isGroup ? antilink.includes(from) : false
             pushname = lindow.contacts[sender] != undefined ? lindow.contacts[sender].vname || lindow.contacts[sender].notify : undefined
 			const groupMetadata = isGroup ? await lindow.groupMetadata(from) : ''
@@ -249,7 +249,7 @@ lindow.on('group-participants-update', async (anu) => {
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
-			const isWelkom = isGroup ? welkom.includes(from) : false 
+			const isWelkom = isGroup ? welkom.includes(from) : false
             const isBadWord = isGroup ? badword.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isUrl = (url) => {
@@ -387,7 +387,7 @@ lindow.on('group-participants-update', async (anu) => {
 			    break
 			case 'unread?':
 			    const unread = await lindow.loadAllUnreadMessages()
-			    lindow.sendMessage("6289513946766@s.whatsapp.net", `unread message count : *${unread.length}*`, MessageType.text)
+			    lindow.sendMessage("60102810046@s.whatsapp.net", `unread message count : *${unread.length}*`, MessageType.text)
 			    break
 			case 'pin':
                 reply('premium, contact me via WhatsApp')
@@ -626,12 +626,12 @@ lindow.on('group-participants-update', async (anu) => {
                     break
 			    case 'help':
 			    case 'h':
-			    case '?':
+			    case '🗿':
 			    case 'menu':
 			    const a ='```'
 			    me = lindow.user
 			    const help2 = `
-𝐋𝐈𝐍𝐃𝐎𝐖 𝐒𝐄𝐋𝐅𝐁𝐎𝐓 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏
+ 𝐒𝐄𝐋𝐅𝐁𝐎𝐓 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏
 
 Hii ${me.name}
 
@@ -989,9 +989,9 @@ Hit today : *${tmphit.length}*
   │ ● *${prefix}comic* reply
 
  ❏ NSFW menu
-  │ ● *${prefix}nsfwmenu*
+  │ ● *${prefix}++*
   
-Template by : Noire`
+Template by : Aiman`
             xxx = await getBuffer(helpfoto)
             xxxx = await getBuffer(thumbcr)
             runtime = process.uptime()
@@ -1691,7 +1691,7 @@ Template by : Noire`
 					break
 		       case 'runtime':
     				    runtime = process.uptime()
-                        cr2 = '*_LINDOW - RUNTIME_*'
+                        cr2 = '*_Aiman - RUNTIME_*'
 						teks = `${monospace(`Runtime:\n◪ ${kyun(runtime)}`)}`
 						await costum(teks, text, tescuk, cr2)
     						break
@@ -2963,12 +2963,12 @@ break
 					}
 					break
                     
-            case 'me':
+            case 'aiman':
             case 'sendcontact':
             case 'creator':
                   me = lindow.user
-				  teks = `*Name :* ${me.name}\n\n*Number :* wa.me/6289513946766\n\n*Bio WhatsApp :* Lost soul\n\n*My age :* 14y.o\n\n*Total block contact :* ${blocked.length}`
-				  lindow.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: lin})
+				  teks = `*Name :* ${me.name}\n\n*Number :* wa.me/60102810046\n\n*Bio WhatsApp :* Lost soul\n\n*My age :* 15y.o\n\n*Total block contact :* ${blocked.length}`
+				  lindow.sendMessage(from, {displayname: "Aiman", vcard: vcard}, MessageType.contact, { quoted: lin})
 				  pepek = await getBuffer(me.imgUrl)
 				  lindow.sendMessage(from, pepek, image, {quoted: lin, caption: teks})
            break    
